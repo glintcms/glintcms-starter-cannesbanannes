@@ -1,0 +1,26 @@
+{
+  "name": "page-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "browser": "browser.js",
+  "browserify": {
+    "transform": [
+      [
+        "brfs"
+      ],
+      [
+        "envify",
+        {
+          "_": "purge"
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Andi Neck",
+  "license": "MIT"
+}

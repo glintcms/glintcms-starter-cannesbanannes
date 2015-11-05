@@ -1,0 +1,20 @@
+{
+  "teaser1Title": "Cannes",
+  "teaser1SubTitle": "Banannes",
+  "teaser1Action": "Enter",
+  "teaser2Title": "Cannes",
+  "teaser2SubTitle": "Banannes",
+  "teaser2Action": "Enter",
+  "startIntro": "Willkommen auf CannesBanannes",
+  "calendarIntro": "Hier siehst du die provisorischen und die definitiv gebuchten Termine",
+  "calendarOutro": "&nbsp;",
+  "reservationIntro": "Bitte fülle folgendes Formular aus und sende es ab.\nDeine Reservierung sollte dann im Kalender ersichtlich sein.\nBitte überprüfen. ",
+  "reservationOutro": "&nbsp;",
+  "infoIntro": "Weitere Informationen kannst du bei uns gerne abholen.",
+  "contactIntro": "Bei Fragen ungeniert anrufen: +41 404 00 00",
+  "contactOutro": "Oder ein Email senden:",
+  "meta": {
+    "title": "glint cms",
+    "description": "the invisible cms"
+  }
+}

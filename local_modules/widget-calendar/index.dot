@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row">
+
+    <div class="text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+
+      <p data-id="calendarIntro">{{= it.calendarIntro }}</p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    {{? it.calendarError }}
+
+    <div class="text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+
+
+      <h2>Kalender</h2>
+
+      <div>Der Kalender ist momentan nicht verfügbar ;-(</div>
+      <a type="submit" class="js-contact-button btn btn-primary" href="mailto:andi.neck@intesso.com?subject=Fehler%20f%C3%BCr%20Cannes&amp;body="><span class="glyphicon glyphicon-envelope"></span>Fehler melden</a>
+
+    </div>
+
+    {{?? }}
+
+    <div class="calendar col-md-9 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+
+      <h2>Kalender</h2>
+
+      <div id='calendar-view'></div>
+
+    </div>
+
+    <div class="heading calendar-caption text-center col-md-3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+      <h2>Legende</h2>
+
+      <ul>
+
+        {{ it.calendars.forEach(function(cal) { }}
+
+        <li style="color: {{=cal.foregroundColor}}; background-color: {{=cal.backgroundColor}};">
+
+          {{= cal.summary }}
+
+        </li>
+
+        {{ }); }}
+
+      </ul>
+
+    </div>
+
+    {{?}}
+
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="row">
+
+
+  </div>
+
+</div>
+
+<div class="container top20">
+  <div class="row">
+
+    <div class="text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+
+      <p data-id="calendarOutro">{{= it.calendarOutro }}</p>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,20 @@
+{
+  "teaser1Title": "",
+  "teaser1SubTitle": "",
+  "teaser1Action": "",
+  "teaser2Title": "",
+  "teaser2SubTitle": "",
+  "teaser2Action": "",
+  "startIntro": "",
+  "calendarIntro": "",
+  "calendarOutro": "",
+  "reservationIntro": "",
+  "reservationOutro": "",
+  "infoIntro": "",
+  "contactIntro": "",
+  "contactOutro": "",
+  "meta": {
+    "title": "glint cms",
+    "description": "the invisible cms"
+  }
+}

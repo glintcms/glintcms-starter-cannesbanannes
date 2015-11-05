@@ -1,0 +1,83 @@
+
+<div class="container">
+
+    <div class="filemanager center <%- list ? '' : 'width-0-8 max-width' %> ">
+
+        <!-- bread crumbs navigation -->
+        <h2 class="clearfix">
+
+            <div>
+                <!-- views -->
+                <span class="filemanager-button js-list">List </span>
+                <span class="filemanager-button js-preview">Preview </span>
+
+                <!-- <a href="/">~ /</a> -->
+                <% crumbs.forEach(function(crumb, i){ %>
+                <% if (!crumb.last) { %>
+                <a href="<%- crumb.href %>"> <%- crumb.name %> /</a>
+                <% } else { %>
+                <span><%- crumb.name %></span>
+                <% } %>
+                <% }); %>
+            </div>
+
+        </h2>
+
+
+        <% if (list) { %>
+
+        <!-- files list view -->
+
+        <!-- title -->
+        <div class="row size-0-8">
+
+            <span class="col-3-8">Name</span>
+            <span class="col-1-8 right">Size</span>
+            <span class="col-2-8">Created</span>
+            <span class="col-2-8">Modified</span>
+
+        </div>
+
+        <!-- content -->
+        <% files.forEach(function(file){ %>
+
+        <div class="row size-0-8">
+            <a href="<%- file.link %>" class="<%- file.isDirectory ? '' :'js-selectable' %>" >
+
+                <span class="col-3-8 <%- file.icon.className %>"><%- file.name %></span>
+                <span class="col-1-8 right"><%- file.isDirectory ? '-' : file.size %></span>
+                <span class="col-2-8"><%- new Date(file.stat.birthtime).toLocaleDateString() %> <%- new Date(file.stat.birthtime).toLocaleTimeString() %></span>
+                <span class="col-2-8"><%- new Date(file.stat.ctime).toLocaleDateString() %> <%- new Date(file.stat.ctime).toLocaleTimeString() %></span>
+
+            </a>
+        </div>
+
+        <% }); %>
+
+        <% } else { %>
+
+        <!-- files preview -->
+        <% files.forEach(function(file){ %>
+
+        <div class="row">
+            <a href="<%- file.link %>" class="<%- file.isDirectory ? '' :'js-selectable' %>" >
+
+                <% if (file.isImage) { %>
+                <span><img class="width-1" src="<%- file.link %>" /></span>
+                <% } else if (file.isDirectory) { %>
+                <span class="<%- file.icon.className %>"><%- file.name %></span>
+                <% } else { %>
+                <span class="<%- file.icon.className %>"><%- file.name %></span>
+                <% } %>
+
+            </a>
+        </div>
+
+        <% }); %>
+
+        <% } %>
+
+    </div>
+
+</div>
+

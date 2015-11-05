@@ -1,0 +1,40 @@
+
+<div class="container">
+
+    <div class="error">
+
+        <% if (typeof error !== 'undefined') { %>
+
+        <h2>
+            <%= error.status %>
+            <small><%= error.message %></small>
+        </h2>
+        <pre><%= error.stack %></pre>
+
+        <% } else { %>
+
+        <h2>
+            Sorry, nothing here.
+        </h2>
+
+        <% } %>
+
+    </div>
+
+    <style>
+        div.error pre {
+            font-size: 0.7em;
+            font-family: 'Courier New' , Monospace;
+            background-color: rgba(20, 20, 20, 0.8);
+            color: #fff;
+            border: none;
+        }
+
+        div.error small {
+            color: #ddd;
+        }
+    </style>
+
+</div>
+
+

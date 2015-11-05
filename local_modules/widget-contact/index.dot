@@ -1,0 +1,40 @@
+<!--<div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div>-->
+<div id="contact-us" class="parallax">
+  <div class="container">
+    <div class="row">
+      <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <h2>Kontakt</h2>
+
+        <p data-id="contactIntro">{{= it.contactIntro }}</p>
+
+      </div>
+    </div>
+    <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+
+          <p data-id="contactOutro">{{= it.contactOutro }}</p>
+
+        </div>
+        <form class="js-contact-form" method="POST"><input type="hidden" name="_csrf">
+
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group"><label for="subject" class="control-label" i18n=Subject>Titel</label>
+              <input class="form-control js-subject" type="subject" name="subject" placeholder="Anfrage für Cannes">
+            </div>
+            <div class="form-group"><label for="message" class="control-label">Nachricht</label>
+              <textarea class="form-control js-message" type="message" name="message" rows="10" placeholder="Bitte meldet euch bei mir"></textarea>
+            </div>
+            <div class="form-group">
+              <a type="submit" class="js-contact-button btn btn-primary" href="#"><span class="glyphicon glyphicon-envelope"></span>Email senden</a>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="clearfix"></div>
+
+      </div>
+    </div>
+  </div>
+</div>

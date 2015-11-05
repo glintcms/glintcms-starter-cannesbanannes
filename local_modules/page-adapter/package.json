@@ -1,0 +1,13 @@
+{
+  "name": "page-adapter",
+  "version": "1.0.0",
+  "description": "configured glint adapter",
+  "main": "server.js",
+  "browser": "browser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Andi Neck",
+  "license": "MIT"
+}

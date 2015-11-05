@@ -1,0 +1,28 @@
+*~
+.DS_Store
+**/.DS_Store
+*.log
+
+.runtime
+.idea
+
+*.local
+
+# datastore default config
+datastore/glint/session/*
+datastore/glint/user/*
+!datastore/glint/user/7032a580-5c4e-11e5-b149-5bd68197214e.json
+!datastore/glint/user/e8dd9020-82c9-11e5-96ee-af161ac181ff.json
+datastore/glint/role/*
+!datastore/glint/role/7032a580-5c4e-11e5-b149-5bd68197214e.json
+!datastore/glint/role/e8dd9020-82c9-11e5-96ee-af161ac181ff.json
+
+# exclude node_modules
+node_modules
+local_modules/**/node_modules
+
+# public/files
+public/assets
+public/tmp
+public/build/*
+!public/build/placeholder

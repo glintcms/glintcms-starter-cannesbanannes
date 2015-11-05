@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Andi Neck">
+    <meta name="description" content="<%= typeof meta !== 'undefined' ? meta.description : '' %>">
+    <title><%= typeof meta !== 'undefined' ? meta.title : '' %></title>
+
+    <link href="/assets/wrap-layout/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/wrap-layout/css/animate.min.css" rel="stylesheet">
+    <link href="/assets/wrap-layout/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/wrap-layout/css/lightbox.css" rel="stylesheet">
+    <link href="/assets/wrap-layout/css/main.css" rel="stylesheet">
+    <link href="/assets/wrap-layout/css/presets/preset1.css" rel="stylesheet" id="css-preset">
+    <link href="/assets/wrap-layout/css/responsive.css" rel="stylesheet">
+    <link href="/assets/widget-calendar/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="/assets/widget-calendar/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="/assets/widget-calendar/fullcalendar-2.4.0/fullcalendar.min.css" rel="stylesheet">
+    <link href="/assets/widget-calendar/fullcalendar-2.4.0/fullcalendar.print.css" rel="stylesheet" media="print">
+
+    <% if (typeof style !== 'undefined') { %>
+    <link rel='stylesheet' href='<%- style %>'/>
+    <% } %>
+
+    <!--[if lt IE 9]>
+    <script src="/assets/wrap-layout/js/html5shiv.js"></script>
+    <script src="/assets/wrap-layout/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="/assets/wrap-layout/favicon.ico">
+</head>
+<!--/head-->
+
+<body>
+
+<%- messages %>
+
+<!--.preloader-->
+<div class="preloader"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+<!--/.preloader-->
+
+<%- menu %>
+
+<%- content %>
+
+<footer id="footer">
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6" data-id="footer-left">
+                    <p><%- footerLeft %></p>
+                </div>
+                <div class="col-sm-6 hidden-xs" data-id="footer-right">
+                    <%- footerRight %>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script id="context" type="application/javascript">
+    // TODO caution: fails with escaped characters like newline \n
+    <% if (typeof context !== 'undefined' && context) { %>
+    window.context = JSON.parse('<%- JSON.stringify(context) %>');
+    <% } else { %>
+    window.context = {};
+    <% } %>
+</script>
+
+<script type="text/javascript" src="/assets/wrap-layout/js/jquery.js" defer></script>
+<script type="text/javascript" src="/assets/wrap-layout/js/bootstrap.min.js" defer></script>
+<script type="text/javascript" src="/assets/wrap-layout/js/jquery.inview.min.js" defer></script>
+<script type="text/javascript" src="/assets/wrap-layout/js/wow.min.js" defer></script>
+<script type="text/javascript" src="/assets/wrap-layout/js/mousescroll.js" defer></script>
+<script type="text/javascript" src="/assets/wrap-layout/js/smoothscroll.js" defer></script>
+<script type="text/javascript" src="/assets/widget-calendar/moment-with-locales.js" defer></script>
+<script type="text/javascript" src="/assets/widget-calendar/bootstrap-datetimepicker.js" defer></script>
+<script type="text/javascript" src="/assets/widget-calendar/fullcalendar-2.4.0/fullcalendar.min.js" defer></script>
+<script type="text/javascript" src="/assets/widget-calendar/fullcalendar-2.4.0/lang-all.js" defer></script>
+
+<% if (typeof script !== 'undefined') { %>
+<script src='<%- script %>' defer></script>
+<% } %>
+
+<script src="/build/bundle.js" defer></script>
+
+</body>
+</html>

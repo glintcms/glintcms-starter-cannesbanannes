@@ -1,0 +1,5 @@
+{
+  "superadmin" : "view,edit,manage",
+  "admin": "view,edit",
+  "editor": "view,edit"
+}

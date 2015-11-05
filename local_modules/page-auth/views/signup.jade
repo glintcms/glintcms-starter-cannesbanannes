@@ -1,0 +1,18 @@
+.col-sm-8.col-sm-offset-2
+  small if you don't yet have an account
+  br
+  form(id='signup-form', method='POST' action='/signup')
+    input(type='hidden', name='_csrf', value='_csrf')
+    .form-group
+      label.control-label(for='email') Email
+      input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus)
+    .form-group
+      label.control-label(for='password') Password
+      input.form-control(type='password', name='password', id='password', placeholder='Password')
+    .form-group
+      label.control-label(for='confirmPassword') Confirm Password
+      input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password')
+    .form-group
+      button.btn.btn-success(type='submit')
+        span.glyphicon.glyphicon-plus
+        | Signup

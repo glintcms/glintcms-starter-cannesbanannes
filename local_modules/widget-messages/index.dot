@@ -1,0 +1,40 @@
+{{? it.messages }}
+
+<div class="widget-messages">
+
+  {{? it.messages.errors}}
+  <div class="alert alert-danger fade in">
+    <button class="close" type="button" data-dismiss="alert">
+      <span class="glyphicon glyphicon-remove-circle"></span>
+    </button>
+    {{~ it.messages.errors :message }}
+    <div>{{= message.msg }}</div>
+    {{~}}
+  </div>
+  {{?}}
+
+  {{? it.messages.info}}
+  <div class="alert alert-info fade in">
+    <button class="close" type="button" data-dismiss="alert">
+      <span class="glyphicon glyphicon-remove-circle"></span>
+    </button>
+    {{~ it.messages.info :message }}
+    <div>{{= message.msg }}</div>
+    {{~}}
+  </div>
+  {{?}}
+
+  {{? it.messages.success}}
+  <div class="alert alert-success fade in">
+    <button class="close" type="button" data-dismiss="alert">
+      <span class="glyphicon glyphicon-remove-circle"></span>
+    </button>
+    {{~ it.messages.success :message }}
+    <div>{{= message.msg }}</div>
+    {{~}}
+  </div>
+  {{?}}
+
+</div>
+
+{{?}}

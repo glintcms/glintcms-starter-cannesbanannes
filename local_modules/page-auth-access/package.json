@@ -1,0 +1,31 @@
+{
+  "name": "page-auth-access",
+  "version": "1.0.0",
+  "description": "role based access control.",
+  "main": "server.js",
+  "browser": "browser.js",
+  "browserify": {
+    "transform": [
+      [
+        "brfs"
+      ],
+      [
+        "envify",
+        {
+          "_": "purge"
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Andi Neck",
+  "license": "MIT",
+  "dependencies": {
+    "modella": "^0.2.14",
+    "modella-glint": "^1.0.0",
+    "wildcard": "^1.1.2"
+  }
+}

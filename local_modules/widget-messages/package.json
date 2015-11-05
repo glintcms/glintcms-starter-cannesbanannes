@@ -1,0 +1,20 @@
+{
+  "name": "widget-messages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browser": "index.js",
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andi Neck",
+  "license": "MIT",
+  "dependencies": {
+    "scrolling": "^0.1.1"
+  }
+}

@@ -1,0 +1,54 @@
+.col-sm-8.col-sm-offset-2
+  form(method='POST' action='/login')
+    input(type='hidden', name='_csrf', value=_csrf)
+    h2 Login
+    .form-group
+      label.control-label(for='email') Email
+      input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus=true)
+    .form-group
+      label.control-label(for='password') Password
+      input.form-control(type='password', name='password', id='password', placeholder='Password')
+    .form-group
+      button.btn.btn-primary(type='submit')
+        span.glyphicon.glyphicon-log-in
+        | Login
+      a.btn.btn-link(href='/forgot') Forgot your password?
+    a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
+      i.fa.fa-facebook
+      | Sign in with Facebook
+    a.btn.btn-block.btn-twitter.btn-social(href='/auth/twitter')
+      i.fa.fa-twitter
+      | Sign in with Twitter
+    a.btn.btn-block.btn-google-plus.btn-social(href='/auth/google')
+      i.fa.fa-google-plus
+      | Sign in with Google
+    a.btn.btn-block.btn-github.btn-social(href='/auth/github')
+      i.fa.fa-github
+      | Sign in with GitHub
+    a.btn.btn-block.btn-linkedin.btn-social(href='/auth/linkedin')
+      i.fa.fa-linkedin
+      | Sign in with LinkedIn
+    a.btn.btn-block.btn-instagram.btn-social(href='/auth/instagram')
+      i.fa.fa-instagram
+      | Sign in with Instagram
+
+  div.clearfix
+  hr
+
+  form(id='signup-form', method='POST' action='/signup')
+    input(type='hidden', name='_csrf', value='_csrf')
+    h2 or Signup
+      small   if you don't yet have an account
+    .form-group
+      label.control-label(for='email') Email
+      input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus)
+    .form-group
+      label.control-label(for='password') Password
+      input.form-control(type='password', name='password', id='password', placeholder='Password')
+    .form-group
+      label.control-label(for='confirmPassword') Confirm Password
+      input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password')
+    .form-group
+      button.btn.btn-success(type='submit')
+        span.glyphicon.glyphicon-plus
+        | Signup

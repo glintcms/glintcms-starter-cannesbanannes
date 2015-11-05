@@ -1,0 +1,86 @@
+{{ if (!it.user) { }}
+
+<section id="login">
+  <div class="container">
+    <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+      <div class="row">
+        <div class="text-center col-sm-8 col-sm-offset-2">
+          <h2>Anmeldung</h2>
+
+          <p>Für diese Seite musst du dich anmelden, </p><i>sonst ist's irgendwie nicht so spannend...</i>
+          <!--<p data-id="loginIntro">{{= it.loginIntro }}</p>-->
+
+        </div>
+      </div>
+    </div>
+    <div class="text-center our-services">
+      <div class="row">
+
+        <div class="col-sm-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <form method="POST" action="/login"><input type="hidden" name="_csrf" value="_csrf">
+
+            <div class="col-sm-8 col-sm-offset-2">
+              <div class="form-group">
+                <label for="email" class="control-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" autofocus="autofocus" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password" class="control-label">Passwort</label>
+                <input type="password" name="password" id="password" placeholder="Passwort" class="form-control">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span>Anmelden</button>
+                oder eine <a class="js-contact-button" href="#">Anfrage via Email</a> senden
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--/#login-->
+
+{{ } }}
+
+<div class="enter"></div>
+
+
+{{ if (it.user) { }}
+
+<div class="container top20">
+  <div class="row">
+    <div class="text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+
+      <p data-id="startIntro">{{= it.startIntro }}</p>
+
+    </div>
+  </div>
+</div>
+
+<section id="calendar">{{= it.calendar }}</section>
+
+<section id="reservation">{{= it.reservation }}</section>
+<!--/#reservation-->
+
+<section id="info">
+  <div class="container">
+    <div class="row">
+      <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <h2>Info</h2>
+
+        <p data-id="infoIntro">{{= it.infoIntro }}</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--/#info-->
+
+<section id="contact">{{= it.contact }}</section>
+
+{{ } }}
+
+<!--/#contact-->

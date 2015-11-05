@@ -1,0 +1,69 @@
+<header id="home">
+
+  {{? it.teaser1Title }}
+
+  <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+    <div class="carousel-inner">
+      <div class="item active" style="background-image: url(/assets/wrap-layout/images/slider/1.jpg)">
+        <div class="caption">
+          <h1 class="animated fadeInLeftBig" data-id="teaser1Title">{{= it.teaser1Title }}</h1>
+
+          <p class="animated fadeInRightBig"><span data-id="teaser1SubTitle">{{= it.teaser1SubTitle }}</span></p>
+          <a data-scroll class="btn btn-start" href="#{{= (it.user) ? 'calendar': 'login'}}" data-id="teaser1Action">{{= it.teaser1Action }}</a>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(/assets/wrap-layout/images/slider/2.jpg)">
+        <div class="caption">
+          <h1 class="animated fadeInLeftBig" data-id="teaser2Title">{{= it.teaser2Title }}</h1>
+
+          <p class="animated fadeInRightBig"><span data-id="teaser2SubTitle">{{= it.teaser2SubTitle }}</span></p>
+          <a data-scroll class="btn btn-start" href="#{{= (it.user) ? 'calendar': 'login'}}" data-id="teaser2Action">{{= it.teaser2Action }}</a>
+        </div>
+      </div>
+    </div>
+    <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+    <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+
+  </div>
+
+  {{?}}
+
+  <!--/#home-slider-->
+  <div class="main-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <h1><img class="logo img-responsive" src="/assets/wrap-layout/images/logo.png" alt="logo"></h1>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="scroll active"><a href="#home">Start</a></li>
+
+          {{ if (!it.user) { }}
+
+          <li class="scroll"><a href="#login">Anmelden</a></li>
+
+          {{ } else { }}
+
+          <li class="scroll"><a href="#calendar">Kalender</a></li>
+          <li class="scroll"><a href="#reservation">Reservierung</a></li>
+          <li class="scroll"><a href="#info">Info</a></li>
+          <li class="scroll"><a href="#contact">Kontakt</a></li>
+          <li><a href="/logout">Abmelden</a></li>
+
+          {{ } }}
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--/#main-nav-->
+</header>
+<!--/#home-->

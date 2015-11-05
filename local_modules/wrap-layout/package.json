@@ -1,0 +1,16 @@
+{
+  "name": "wrap-layout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  },
+  "author": "Andi Neck",
+  "license": "MIT",
+  "dependencies": {
+    "scrolling": "^0.1.1"
+  }
+}

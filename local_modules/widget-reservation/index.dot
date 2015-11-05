@@ -1,0 +1,72 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+      <h2>Reservierung</h2>
+
+      <p data-id="reservationIntro">{{= it.reservationIntro }}</p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="reservation col-sm-8 col-sm-offset-2">
+
+      <div class="form-group"><label for="reservation-start" class="control-label">Von</label>
+
+        <div class='input-group date' id='reservation-start'>
+          <input id="reservation-startDate" type='text' name="reservation-start" class="form-control" placeholder="01.01.2020 00:00"/>
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+        </div>
+      </div>
+      <div class="form-group"><label for="reservation-end" class="control-label">Bis</label>
+
+        <div class='input-group date' id='reservation-end'>
+          <input id="reservation-endDate" type='text' name="reservation-end" class="form-control" placeholder="02.01.2020 00:00"/>
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+        </div>
+      </div>
+      <div class="form-group"><label for="reservation-name" class="control-label">Name</label>
+        <input id="reservation-name" type='text' name="reservation-name" class="form-control" placeholder="Dein Name"/>
+      </div>
+      <div class="form-group"><label for="reservation-email" class="control-label">Email</label>
+        <input id="reservation-email" type='email' name="reservation-email" class="form-control" placeholder="gwunder@na.as" />
+      </div>
+      <div class="form-group"><label for="reservation-message" class="control-label">Nachricht</label>
+        <textarea id="reservation-message" class="form-control js-message" name="reservation-message" rows="10" placeholder=""></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="js-reservation-button btn btn-primary"><span class="glyphicon glyphicon-send"></span>Reservierung anfragen</button>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="reservation col-sm-8 col-sm-offset-2">
+
+      <p data-id="reservationOutro">{{= it.reservationOutro }}</p>
+
+    </div>
+
+  </div>
+</div>
+
+
+

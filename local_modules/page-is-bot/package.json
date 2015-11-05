@@ -1,0 +1,22 @@
+{
+  "name": "page-is-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "browser": "browser.js",
+  "browserify": {
+    "transform": [
+      ["brfs"],
+      ["envify", {"_": "purge"}]
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "connect-is-bot": "^1.0.0"
+  },
+  "author": "Andi Neck",
+  "license": "MIT"
+}
