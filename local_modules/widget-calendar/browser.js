@@ -49,7 +49,7 @@ module.exports = function widget(o) {
         right: 'month,basicWeek,basicDay'
       },
       lang: 'de',
-      defaultDate: new Date().toLocaleDateString(),
+      defaultDate: new Date().toISOString(),
       editable: false,
       eventLimit: true, // allow "more" link when too many events
       eventSources: sources
