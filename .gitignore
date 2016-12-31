@@ -5,6 +5,7 @@
 
 .runtime
 .idea
+.vscode
 
 *.local
 

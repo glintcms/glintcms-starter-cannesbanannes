@@ -75,7 +75,6 @@ exports = module.exports = function authController(o) {
    * Signup page.
    */
   exports.getSignup = function(req, res, next) {
-    if (req.user) return res.redirect('/');
 
     view(o).signup
       .load(res.locals, function(err, result) {
@@ -90,6 +89,7 @@ exports = module.exports = function authController(o) {
    * Signin page. (Login + Signup)
    */
   exports.getSignin = function(req, res, next) {
+
     if (req.user) return res.redirect('/');
 
     view(o).signin

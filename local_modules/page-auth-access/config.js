@@ -3,6 +3,8 @@ exports.rules = [
   [['POST', 'PUT', 'DELETE'], '/*/glint/config/*', 'manage'],
   [['GET'], '/signup/*', 'manage'],
   ['*', '/signin/*', 'manage'],
+  ['*', '/account/password', 'manage'],
+  ['*', '/account/delete', 'manage'],
   ['*', '/upload/*', 'edit'],
   ['GET', '/translate/*', 'edit,manage'],
   ['GET', '/filemanager/*', 'edit,manage'],
